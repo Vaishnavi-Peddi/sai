@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Smart Farming AI</title>
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcome-screen" class="welcome-screen">
+    <h1 class="welcome-title">Welcome to Smart Farming AI</h1>
+    <p class="welcome-subtitle">Empowering farmers with smart solutions</p>
+    <button id="lets-go-btn" class="btn">Let's Go</button>
+  </div>
+
+  <!-- Main Container -->
+  <div id="main-container" class="container hidden">
+    <h1 class="title">Smart Farming AI</h1>
+    <p class="subtitle">Get the best farming practices based on your conditions</p>
+    <form id="farming-form" class="form">
+      <div class="form-group">
+        <label for="weather">Weather Condition:</label>
+        <select id="weather" class="select">
+          <option value="Sunny">Sunny</option>
+          <option value="Rainy">Rainy</option>
+          <option value="Dry">Dry</option>
+          <option value="Windy">Windy</option>
+          <option value="Humid">Humid</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="soil">Soil Type:</label>
+        <select id="soil" class="select">
+          <option value="Red">Red</option>
+          <option value="Sandy">Sandy</option>
+          <option value="Clayey">Clayey</option>
+          <option value="Black">Black</option>
+          <option value="Peaty">Peaty</option>
+          <option value="Silty">Silty</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="crop">Crop:</label>
+        <input type="text" id="crop" class="input" placeholder="Enter your crop">
+      </div>
+      <div class="form-group">
+        <label for="hectares">Hectares of Land:</label>
+        <input type="number" id="hectares" class="input" placeholder="Enter area in hectares">
+      </div>
+      <button type="submit" class="btn">Get Suggestions</button>
+    </form>
+    <div id="weather-suggestions" class="weather-tips hidden">
+      <h3>Weather Tips</h3>
+      <p id="weather-tips">Select a weather condition to get tips.</p>
+      <ul id="recommendation-tips"></ul>
+    </div>
+    <div id="results" class="results hidden">
+      <h2>Farming Suggestions</h2>
+      <p id="suggestion-text"></p>
+      <p id="investment-analysis"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
